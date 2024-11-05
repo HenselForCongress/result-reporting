@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}VA 8th District Election Results{% endblock %}
+
+{% block content %}
+
+<div class="update-info text-center mb-3">
+    <!-- Data Updated displays the time when the server last fetched the data -->
+    <p id="data-updated" class="mb-0">Data updated: {{ last_updated }} EST</p>
+
+    <!-- Browser Updated displays the time when the page was last loaded in the browser -->
+    <p id="browser-updated" class="mb-0">Browser updated: <span id="browser-update-time"></span></p>
+
+    <p class="mb-0">Next update in <span id="next-update" data-interval="{{ update_interval }}">10 seconds</span></p>
+</div>
+
+<h2>Totals</h2>
+<table>
+    <thead>
+        <tr>
+            {% for candidate in candidates %}
+                <th>{{ candidate }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            {% for candidate in candidates %}
+                <td>{{ candidate_totals[candidate] }}</td>
+            {% endfor %}
+        </tr>
+    </tbody>
+</table>
+
+<h2>Precinct Results by County</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Precinct</th>
+            {% for candidate in candidates %}
+                <th>{{ candidate }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for county, precincts in county_data.items() %}
+            <tr class="county-row">
+                <td colspan="{{ candidates|length + 1 }}">{{ county }}</td>
+            </tr>
+            {% for precinct, results in precincts.items() %}
+                <tr>
+                    <td>{{ precinct }}</td>
+                    {% for candidate in candidates %}
+                        <td>{{ results.get(candidate, 0) }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

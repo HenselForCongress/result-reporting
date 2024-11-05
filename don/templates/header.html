@@ -1,0 +1,23 @@
+<header class="bg-dark text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="mb-0">VA 8th District Election Results</h1>
+        <nav>
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item"><a href="{{ url_for('results.index') }}" class="text-white">Home</a></li>
+                <li class="list-inline-item"><a href="{{ url_for('results.voting_methods') }}" class="text-white">Voting Methods</a></li>
+                <li class="list-inline-item"><a href="{{ url_for('admin.admin') }}" class="text-white">Admin</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="update-info mt-2">
+        <p>Data updated: <strong>{{ last_updated }}</strong></p>
+        <p>Browser updated: <strong><span id="browser-update-time"></span></strong></p>
+        <p>Next browser update in <span id="next-update">10</span> seconds</p>
+        <select id="update-frequency">
+            <option value="5">5s</option>
+            <option value="10" selected>10s</option>
+            <option value="30">30s</option>
+            <option value="60">1m</option>
+        </select>
+    </div>
+</header>

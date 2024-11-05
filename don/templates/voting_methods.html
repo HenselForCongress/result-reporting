@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Election Results by Voting Method{% endblock %}
+
+{% block content %}
+<h2>Results by Voting Method</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Voting Method</th>
+            {% for candidate in candidates %}
+                <th>{{ candidate }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for method, results in voting_method_data.items() %}
+            <tr>
+                <td>{{ method }}</td>
+                {% for candidate in candidates %}
+                    <td>{{ results.get(candidate, 0) }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.county-row {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+/*==========================
+    Updater
+==========================*/
+.update-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: #333; /* Dark background for contrast */
+    color: #fff; /* White text */
+    font-size: 0.9rem;
+}
+
+.update-info p {
+    margin: 0;
+}
+
+.update-info select {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+#next-update {
+    font-weight: bold;
+    color: #00ff00; /* Green color for the countdown */
+}
+
+/*==========================
+    Footer Styles
+==========================*/
+
+.footer {
+    text-align: center;
+}
+
+.footer-callout {
+    font-size: 1em;
+    font-weight: normal;
+    padding: 10px;
+    border: 1px solid #000; /* Black border */
+    color: #000; /* Black text */
+    background-color: #fff; /* White background */
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.footer-legal {
+    font-size: 0.9em;
+    color: #666; /* Grey color for disclaimer text */
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #000; /* Black text */
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 10px 0;
+    font-size: 0.85em;
+    color: #666;
+}

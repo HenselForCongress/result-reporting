@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Admin - Set Update Interval{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2>Admin - Set Update Interval</h2>
+    <form method="POST">
+        <label for="update_interval">Select Update Interval:</label>
+        <select name="update_interval" id="update_interval" class="form-control" onchange="this.form.submit()">
+            <option value="5" {% if current_interval == 5 %}selected{% endif %}>5 seconds</option>
+            <option value="10" {% if current_interval == 10 %}selected{% endif %}>10 seconds</option>
+            <option value="30" {% if current_interval == 30 %}selected{% endif %}>30 seconds</option>
+            <option value="60" {% if current_interval == 60 %}selected{% endif %}>1 minute</option>
+            <option value="300" {% if current_interval == 300 %}selected{% endif %}>5 minutes</option>
+        </select>
+    </form>
+</div>
+{% endblock %}

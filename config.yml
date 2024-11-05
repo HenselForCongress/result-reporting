@@ -1,0 +1,32 @@
+# config.yml
+candidates:
+    1:
+        id: "Bentley F. Hensel"
+        name: "Bentley Hensel"
+    2:
+        id: "David R. Kennedy"
+        name: "David Kennedy"
+    3:
+        id: "Donald S. Beyer, Jr."
+        name: "Don Beyer"
+    4:
+        id: "Jerry W. Torres"
+        name: "Jerry Torres"
+    5:
+        id: "Write-In"
+        name: "Write-In"
+
+counties:
+    "FALLS CHURCH CITY": "Falls Church"
+    "ALEXANDRIA CITY": "Alexandria"
+    "ARLINGTON COUNTY": "Arlington"
+    "FAIRFAX COUNTY": "Fairfax"
+
+precincts:
+    "FALLS CHURCH CITY":
+        "001 - FIRST WARD (WARD 1)": "First Ward"
+        "002 - SECOND WARD (WARD 2)": "Second Ward"
+        "003 - THIRD WARD (WARD 3)": "Third Ward"
+    "ALEXANDRIA CITY":
+        "101 - OLD TOWN NORTH (0000)": "Old Town North"
+        "102 - CITY HALL (0000)": "City Hall"
