@@ -2,7 +2,7 @@
 FROM python:3.13
 
 # Install PostgreSQL client and Poetry
-RUN apt-get update && apt-get install -y postgresql-client \
+RUN apt-get update && apt-get install -y \
     && pip install --upgrade pip \
     && pip install poetry \
     && poetry config virtualenvs.create false
